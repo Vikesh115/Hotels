@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
 
 function Facility() {
@@ -10,7 +9,7 @@ function Facility() {
             <span className='font-bold'>Most popular facilities</span>
             <div className='flex flex-wrap flex-row gap-2 items-center '>
                 <div className='flex flex-row flex-wrap gap-5 '>
-                    {details?.facilities?.map((facility, index) => (
+                    {details?.facilities?.slice(0, 10).map((facility, index) => (
                         <p key={index} className='p-1 border-1 rounded bg-blue-800 text-white'>
                             {facility.name}
                         </p>

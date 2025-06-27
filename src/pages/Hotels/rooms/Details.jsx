@@ -65,7 +65,7 @@ function Details() {
             <div className='flex w-[90%] mt-3 lg:mt-72 flex-wrap justify-start gap-1'>
                     <p className='flex w-[100%] pl-6 font-bold text-3xl'>Facility</p>
                     <div className='flex flex-wrap pl-6 gap-2'>
-                        {room?.roomAmenities?.map((item, index) => (
+                        {room?.roomAmenities?.slice(0, 10).map((item, index) => (
                             <p key={index} className='p-2 border-1 bg-blue-800 text-white rounded'>{item.name}</p>
                         ))}
                     </div>
